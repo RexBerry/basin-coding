@@ -334,15 +334,7 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
     }
 
     function isWhitespace(ch) {
-        return ch === ' '
-            || ch === '\n'
-            || ch === '\r'
-            || ch === '\t'
-            || ch === '\v'
-            || ch === '\f'
-            || ch === '\u00A0'
-            || ch === '\u2028'
-            || ch === '\u2029'
+        return " \n\r\t\v\f\u00A0\u2028\u2029".includes(ch)
     }
 
     return [DEFAULT_ALPHABET, Encoder, Decoder]
