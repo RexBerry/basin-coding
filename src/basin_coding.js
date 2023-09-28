@@ -1,7 +1,7 @@
 const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
     const DEFAULT_ALPHABET
         = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        + "!@#$%^*()-=;,./_+{}|:?~"
+        + "!@()-=;.+{}|?"
     const MIN_ALPHABET_SIZE = 2
     const MAX_ALPHABET_SIZE = 256
     // The size of the alphabet must not be greater than the number of possible
@@ -14,7 +14,7 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
     class Encoder {
         /**
          * Create an Encoder object with the provided or default alphabet
-         * @param {string} alphabet The alphabet to use. Uses a base-85
+         * @param {string} alphabet The alphabet to use. Uses a 75-character
          *  alphabet by default. All characters should be unique.
          */
         constructor(alphabet = DEFAULT_ALPHABET) {
@@ -132,7 +132,7 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
     class Decoder {
         /**
          * Create a Decoder object with the provided or default alphabet
-         * @param {string} alphabet The alphabet to use. Uses a base-85
+         * @param {string} alphabet The alphabet to use. Uses a 75-character
          *  alphabet by default. All characters should be unique.
          */
         constructor(alphabet = DEFAULT_ALPHABET) {
