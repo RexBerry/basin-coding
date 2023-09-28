@@ -206,6 +206,7 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
                     const charCode = encodedText.charCodeAt(i)
                     if (!decodingTable.has(charCode)) {
                         if (isWhitespace(encodedText[i])) {
+                            ++i
                             continue
                         }
                         throw new Error("invalid input string")
