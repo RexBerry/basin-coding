@@ -31,6 +31,10 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
                 )
             }
 
+            if (new Set(alphabet).size < alphabet.length) {
+                throw new Error("alphabet must contain unique characters")
+            }
+
             this.encodingTable = alphabet
         }
 
@@ -148,6 +152,10 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
             this.decodingTable = new Map()
             for (let i = alphabet.length; i--;) {
                 this.decodingTable.set(alphabet.charCodeAt(i), i)
+            }
+
+            if (this.decodingTable.size < alphabet.length) {
+                throw new Error("alphabet must contain unique characters")
             }
         }
 
