@@ -1,6 +1,4 @@
 const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
-    "use strict"
-
     const DEFAULT_ALPHABET
         = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         + "!@#$%^*()-=;,./_+{}|:?~"
