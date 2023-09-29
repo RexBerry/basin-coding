@@ -14,7 +14,7 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
     class Encoder {
         /**
          * Create an Encoder object with the provided or default alphabet
-         * @param {string} alphabet The alphabet to use. Uses a base-85
+         * @param {string} alphabet The alphabet to use. Uses an 85-character
          *  alphabet by default. All characters should be unique.
          */
         constructor(alphabet = DEFAULT_ALPHABET) {
@@ -132,7 +132,7 @@ const [DEFAULT_ALPHABET, Encoder, Decoder] = (() => {
     class Decoder {
         /**
          * Create a Decoder object with the provided or default alphabet
-         * @param {string} alphabet The alphabet to use. Uses a base-85
+         * @param {string} alphabet The alphabet to use. Uses an 85-character
          *  alphabet by default. All characters should be unique.
          */
         constructor(alphabet = DEFAULT_ALPHABET) {
